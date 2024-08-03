@@ -4,13 +4,13 @@
   "description": "Proyek ini menggunakan OpenCV untuk berbagai aplikasi pemrosesan gambar dan visi komputer.",
   },
   "dependencies": {
-    "opencv4nodejs": "^7.0.0"  // Versi terbaru pada saat penulisan, sesuaikan jika diperlukan
+    "opencv4nodejs": "^7.0.0" 
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"  // Opsional: untuk pengembangan, agar aplikasi restart otomatis saat file berubah
+    "nodemon": "^2.0.22" 
   },
   "engines": {
-    "node": ">=14.0.0"  // Sesuaikan dengan versi Node.js yang Anda gunakan
+    "node": ">=14.0.0"
   },
   "author": "Guntur Khoidir Putra",
   "license": "MIT"

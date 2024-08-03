@@ -1,0 +1,17 @@
+import cv2
+
+# Membaca gambar dari file
+image = cv2.imread('path/to/your/image.jpg')
+
+# Mengubah ukuran gambar
+# Gantilah (width, height) dengan dimensi yang diinginkan
+new_size = (width, height)
+resized_image = cv2.resize(image, new_size)
+
+# Menyimpan gambar yang telah diubah ukurannya
+cv2.imwrite('path/to/save/resized_image.jpg', resized_image)
+
+# Menampilkan gambar yang telah diubah ukurannya
+cv2.imshow('Resized Image', resized_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

@@ -8,11 +8,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22" 
-  },
-  "engines": {
-    "node": ">=14.0.0"
+  }
   },
   "author": "Guntur Khoidir Putra",
   "license": "MIT"
 }
-  

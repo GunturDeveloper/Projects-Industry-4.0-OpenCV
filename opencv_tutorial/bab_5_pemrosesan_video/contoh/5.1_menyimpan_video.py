@@ -1,0 +1,34 @@
+import cv2
+
+# Membuka video dari file atau kamera
+video_capture = cv2.VideoCapture('path/to/your/input_video.mp4')
+
+# Mendapatkan informasi tentang video
+frame_width = int(video_capture.get(cv2.CAP_PROP_FRAME_WIDTH))
+frame_height = int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fps = video_capture.get(cv2.CAP_PROP_FPS)
+
+# Menentukan codec dan membuat objek VideoWriter
+fourcc = cv2.VideoWriter_fourcc(*'XVID')  # Codec video
+output_video = cv2.VideoWriter('path/to/save/output_video.avi', fourcc, fps, (frame_width, frame_height))
+
+while True:
+    # Membaca frame dari video
+    ret, frame = video_capture.read()
+
+    # Jika frame berhasil dibaca
+    if not ret:
+        break
+
+    # Menulis frame ke video output
+    output_video.write(frame)
+
+    # Menampilkan frame (opsional)
+    cv2.imshow('Video', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Menutup video capture dan video writer
+video_capture.release()
+output_video.release()
+cv2.destroyAllWindows()
